@@ -1,0 +1,31 @@
+<link href="../../assets/assets/assets/css/dashboard.css" rel="stylesheet">
+<div class="page">
+  <div class="page-main">
+    <app-header></app-header>
+    <div class="my-3 my-md-5">
+      <div class="container">
+        <div class="page-header">
+          <h1 class="page-title">
+            Gallery
+          </h1>
+        <div class="row row-cards">
+          <div class="col-sm-6 col-lg-4" *ngFor="let card of cards">
+            <div class="card p-3">
+              <a href="javascript:void(0)" class="mb-3">
+                <img src="{{card.photo}}" alt="{{card.caption}}" title="{{card.caption}}" class="rounded">
+              </a>
+              <div class="d-flex align-items-center px-2">
+                <div class="avatar avatar-md mr-3" style="background-image: url(assets/demo/faces/male/41.jpg)"></div>
+                <div>
+                  <div>{{ card.userId.name }}</div>
+                </div>
+                <div class="ml-auto text-muted">
+                  <a href="javascript:void(0)" (click)="delete(card)" class="icon"><i class="fa fa-trash" title="delete"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,36 @@
+<div class="page">
+  <div class="page-main">
+    <app-header></app-header>
+    <div class="my-3 my-md-5">
+      <div class="container">
+        <div class="page-header">
+          <h1 class="page-title">
+            Add a new card
+          </h1>
+        </div>
+
+        <div class="col col-login mx-auto">
+
+              <form class="card" action="" method="post">
+                <div class="card-body p-6">
+                  <div class="error">{{ addcard.errors }}</div>
+                  <div class="form-group">
+                    <label class="form-label">Photo Url</label>
+                    <input type="text" class="form-control" [(ngModel)]="addcard.photo" name="photo" placeholder="Enter photo url">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Caption</label>
+                    <input type="text" class="form-control" [(ngModel)]="addcard.caption" name="caption" placeholder="Add caption">
+                  </div>
+
+                  <div class="form-footer">
+                    <button (click)="add(addcard)" class="btn btn-primary btn-block">Submit</button>
+                  </div>
+                </div>
+              </form>
+
+            </div>
+
+      </div>
+    </div>
+  </div>
