@@ -15,7 +15,7 @@ export class UserService {
 
   register(userData) {
 
-      //  this.http.post('http://localhost:8080/user', userData).subscribe((data:any)=>{
+      //  this.http.post('http://localhost:8081/user', userData).subscribe((data:any)=>{
       this.http.post('/user', userData).subscribe((data: any) => {
           // console.log(data);
           if (data.name) {
